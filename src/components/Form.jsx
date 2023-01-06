@@ -41,6 +41,11 @@ const StyledForm = styled.form`
     background-size: 15px 15px;
     background-repeat: repeat;
   }
+
+  @media (max-width: 430px) {
+    min-width: 90%;
+    padding: 20px;
+  }
 `;
 
 const Form = () => {
