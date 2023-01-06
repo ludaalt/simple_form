@@ -1,7 +1,7 @@
 import Input from "@mui/material/Input";
 import InputLabel from "@mui/material/InputLabel";
 
-const FormInput = ({ type, placeholder, label }) => {
+const FormInput = ({ type, placeholder, label, changeHandler, isError }) => {
   return (
     <>
       <InputLabel sx={{ mb: 1 }}>{label}</InputLabel>
@@ -11,6 +11,9 @@ const FormInput = ({ type, placeholder, label }) => {
         required
         fullWidth
         sx={{ mb: 2 }}
+        autoComplete="off"
+        onChange={(e) => changeHandler(e)}
+        error={isError}
       />
     </>
   );
