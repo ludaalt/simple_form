@@ -1,4 +1,4 @@
-import { PROJECT_NAME_REGEX } from "../const/passwordConst";
+import { PROJECT_NAME_REGEX } from "../const/appConst";
 
 export const isUserNameValid = (username) => {
   if (!username) return;

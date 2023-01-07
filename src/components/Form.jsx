@@ -9,7 +9,7 @@ import { isUserNameValid } from "../helpers/isUserNameValid";
 import { isUserTelephoneValid } from "../helpers/isUserTelephoneValid";
 import { formatUserTelephone } from "../helpers/formatUserTelephone";
 
-import { MAX_PASSWORD_LENGTH } from "../const/passwordConst";
+import { MAX_TELEPHONE_LENGTH } from "../const/appConst";
 
 const StyledForm = styled.form`
   min-width: 400px;
@@ -53,7 +53,7 @@ const Form = () => {
   const [userData, setUserData] = useState({ name: "", telephone: "" });
 
   useEffect(() => {
-    if (userData.telephone.length === MAX_PASSWORD_LENGTH) {
+    if (userData.telephone.length === MAX_TELEPHONE_LENGTH) {
       setUserData((state) => ({
         ...state,
         telephone: formatUserTelephone(userData.telephone),
